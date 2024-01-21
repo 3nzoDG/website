@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #c6c6c6;
 }
@@ -104,11 +108,11 @@ ul {
 /* Btn Up */
 
 .btnUp {
-  height: 70px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
-  background: #fa3d3b;
-  display: none;
+  background: white;
+  display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -121,8 +125,13 @@ ul {
 }
 
 .icone {
-  height: 70px;
-  width: 70px;
+  height: 100%;
+  width: 100%;
+}
+
+.btnUp.show {
+  opacity: 1;
+  visibility: visible;
 }
 /* Header */
 
@@ -138,75 +147,40 @@ ul {
   left: 0;
   width: 100%;
   z-index: 10;
-}
-
-#navHeader a:nth-child(4) {
-  margin-right: 60px;
+  height: 70px;
 }
 
 #navHeader img {
-  width: 70px;
+  height: 100%;
 }
 
-.nav:nth-child(1)::after {
+#navHeader .nav-link::after {
   content: "";
   display: block;
-  position: absolute;
-  width: 50px;
+  width: 100%;
   height: 2px;
+  margin-top: 1px;
   background-color: #c6c6c6;
-  transform: scale(0);
-  transition: transform 0.2s ease-in-out;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
-.nav:nth-child(1):hover::after {
-  transform: scale(1);
+#navHeader .nav-link.active::after {
+  transform: scaleX(1);
 }
 
-.nav:nth-child(2)::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 108px;
-  height: 2px;
-  background-color: #c6c6c6;
-  transform: scale(0);
-  transition: transform 0.2s ease-in-out;
+#navHeader .nav-link:hover::after {
+  transform: scaleX(1);
+}
+main {
+  margin-top: 70px;
 }
 
-.nav:nth-child(2):hover::after {
-  transform: scale(1);
+section {
+  min-height: calc(100vh - 70px);
+  padding: 50px 20px;
 }
 
-.nav3::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 75px;
-  height: 2px;
-  background-color: #c6c6c6;
-  transform: scale(0);
-  transition: transform 0.2s ease-in-out;
-}
-
-.nav3:hover::after {
-  transform: scale(1);
-}
-
-.nav4::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 85px;
-  height: 2px;
-  background-color: #c6c6c6;
-  transform: scale(0);
-  transition: transform 0.2s ease-in-out;
-}
-
-.nav4:hover::after {
-  transform: scale(1);
-}
 /* Main Section Home */
 
 #animated-text {
@@ -218,7 +192,6 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-top: 100px;
 }
 
 .cv {
@@ -234,11 +207,6 @@ ul {
   transition: all 1s ease;
   z-index: 1;
 }
-
-/* .cv:hover {
-  background-color: red;
-  color: #c6c6c6;
-} */
 
 .cv::before {
   content: "";
@@ -263,7 +231,6 @@ ul {
 }
 
 #mainSection {
-  margin: 5em 0 10em;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -275,6 +242,13 @@ ul {
 }
 
 /* About Me Section */
+#aboutMe.showed .progress-bar {
+  animation: progress 1.2s ease forwards;
+}
+
+#aboutMe:not(.showed) .progress-bar {
+  width: 0%;
+}
 
 #aboutMe {
   display: flex;
@@ -317,23 +291,26 @@ ul {
   padding: 0 70px;
 }
 
-#getToKnowMe {
-  width: 700px;
-}
-
 #getToKnowMe p span {
   color: #fa3d3b;
 }
 
 /* Skills */
-
+.skillInfo {
+  display: flex;
+  justify-content: space-between;
+}
+#getToKnowMe,
+#skills {
+  width: 50%;
+}
 #skills h3 {
   margin-bottom: 20px;
 }
 
 #skillsSet {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 20px;
 }
 
@@ -351,6 +328,45 @@ ul {
   background-color: red;
   color: #c6c6c6;
   cursor: default;
+}
+
+/* Progress Bar */
+
+.progress {
+  width: 100%;
+  background-color: #c6c6c6;
+  border-radius: 15px;
+  height: 15px;
+}
+
+.progress-bar {
+  margin-top: 10px;
+  border-radius: 15px;
+  background-color: #fa3d3b;
+  height: 100%;
+  transform-origin: 0 0;
+}
+
+.skill:nth-child(1) .progress-bar {
+  width: 60%;
+}
+.skill:nth-child(2) .progress-bar {
+  width: 25%;
+}
+.skill:nth-child(3) .progress-bar {
+  width: 30%;
+}
+.skill:nth-child(4) .progress-bar {
+  width: 75%;
+}
+
+@keyframes progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
 
 /* My project Section */

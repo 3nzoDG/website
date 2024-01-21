@@ -27,19 +27,16 @@
         <span class="lettre">N</span>
         <span class="lettre">T</span>
     </div>
-    <header>
-        <nav id="navHeader">
-            <a href="" class="nav">Accueil</a>
-            <a href="" class="nav">À propos de moi</a>
-            <img src="Images/logo.png" alt="logo Enzo Di Giovanni">
-            <a href="" class="nav3">Mes projets</a>
-            <a href="" class="nav4">Me contacter</a>
-        </nav>
-    </header>
-
+    <nav id="navHeader">
+        <a href="#mainSection" class="nav-link">Accueil</a>
+        <a href="#aboutMe" class="nav-link ">À propos de moi</a>
+        <img src="Images/logo-white.png" alt="logo Enzo Di Giovanni">
+        <a href="#myProjects" class="nav-link ">Mes projets</a>
+        <a href="#contact" class="nav-link ">Me contacter</a>
+    </nav>
     <main>
-        <div id="mainSection">
-            <section id="presentation">
+        <section id="mainSection">
+            <div id="presentation">
 
                 <h1>Bonjour ! <br> <br><span class=".waviy">Je suis</span> <span id="animated-text"></span></h1>
                 <p>Enthousiaste étudiant en première année à MyDigital School et animé par le désir de devenir un
@@ -50,10 +47,10 @@
                     techniques et de contribuer au monde numérique en constante évolution.
                 </p>
                 <a href="CV_Enzo_DG.pdf" download><button class="cv">Télécharger mon CV</button></a>
-            </section>
+            </div>
             <img src="Images/deadpool.jpg" alt="">
-        </div>
-        <section id="aboutMe">
+        </section>
+        <section id="aboutMe" class="showing">
             <div id="flex1">
 
                 <h3>À PROPOS DE MOI</h3>
@@ -87,17 +84,46 @@
                 </div>
                 <div id="skills">
                     <h3>Mes compétences</h3>
-                    <ul id="skillsSet">
-                        <li class="card skill1">HTML</li>
-                        <li class="card skill2">CSS</li>
-                        <li class="card skill3">JavaScript</li>
-                        <li class="card skill4">Python</li>
-                        <li class="card skill5">WordPress</li>
-                        <li class="card skill6">Elementor</li>
-                    </ul>
+                    <div id="skillsSet">
+                        <div class="skill">
+                            <div class="skillInfo">
+                                <h4>HTML & CSS</h4>
+                                <p>60%</p>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skillInfo">
+                                <h4>JavaScript</h4>
+                                <p>25%</p>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skillInfo">
+                                <h4>Python</h4>
+                                <p>30%</p>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skillInfo">
+                                <h4>Wordpress & Elementor</h4>
+                                <p>75%</p>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
         </section>
-        </div>
         <section id="myProjects">
             <div id="flex3">
 
