@@ -256,7 +256,7 @@ section {
   background-color: #1c1c1c;
 }
 
-#aboutMe h3,
+#aboutMe h2,
 #aboutMe h4,
 #aboutMe p {
   color: #c6c6c6;
@@ -271,7 +271,7 @@ section {
   gap: 25px;
 }
 
-#flex1 h3 {
+#flex1 h2 {
   padding-top: 40px;
 }
 #flex1 hr {
@@ -406,35 +406,75 @@ section {
   display: flex;
   flex-direction: column;
   background-color: #1c1c1c;
-  height: 1000px;
-}
-
-#flex3 {
-  display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
-  margin-bottom: 60px;
-  gap: 25px;
 }
 
-#flex3 hr {
+#myProjects hr {
   width: 100px;
   color: #fa3d3b;
+  margin: 10px 0;
 }
 
-#myProjects h3,
-#myProjects h4,
-#myProjects p {
-  color: #c6c6c6;
-}
-
-#flex3 h3 {
+#myProjects h2 {
   padding-top: 40px;
 }
 
-#flex3 h3,
-#flex3 p {
+#myProjects h2,
+#myProjects > p {
   text-align: center;
   color: #c6c6c6;
+}
+
+#myProjects > p {
+  margin-bottom: 40px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.gallery-item {
+  border-radius: 10px;
+  position: relative;
+  width: 340px;
+  height: 210px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item:hover .gallery-item-overlay {
+  opacity: 1;
+}
+
+.gallery-item-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.2s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.gallery-item-overlay p {
+  color: #c6c6c6;
+  font-weight: 700;
+  font-size: 20px;
 }

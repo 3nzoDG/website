@@ -63,11 +63,6 @@ function updateText() {
 // Initialiser l'animation
 setTimeout(updateText, 200);
 
-// Récuperer les nav-link
-// Écouter quand un nav-link est clické
-// Récuperer l'href du nav-link clické et trouver la section qui à ce href (ID de la section)
-// Scroll jusqu'à l'élement (scroll to)
-
 const navLinks = document.querySelectorAll(".nav-link");
 const navHeight = document.getElementById("navHeader").offsetHeight;
 
@@ -98,6 +93,22 @@ window.addEventListener("scroll", () => {
         ".nav-link[href='#" + section.id + "']"
       );
       navLink.classList.add("active");
+      if (section.id == "aboutMe") {
+        section.classList.add("showed");
+      }
     }
   });
+});
+
+// My Projects : overlay
+const isHover = (e) => e.parentElement.querySelector(":hover") === e;
+
+const myDiv = document.getElementById("gallery-item");
+document.addEventListener("mousemove", function checkHover() {
+  const hovered = isHover(myDiv);
+  if (hovered !== checkHover.hovered) {
+    console.log(hovered ? "hovered" : "not hovered");
+    checkHover.hovered = hovered;
+    console.log("salut");
+  }
 });
