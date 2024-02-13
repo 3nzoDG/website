@@ -26,7 +26,7 @@ upBtn.addEventListener("click", () => {
 
 // Text présentation
 const element = document.getElementById("animated-text");
-const words = ["Enzo Di Giovanni.", "un développeur !"];
+const words = ["Enzo Di Giovanni.", "un développeur !", "un passionné !"];
 let currentWordIndex = 0;
 let isDeleting = false;
 
@@ -35,22 +35,18 @@ function updateText() {
   let currentText = element.innerHTML;
 
   if (isDeleting) {
-    // Supprimer un caractère
     element.innerHTML = currentWord.substring(0, currentText.length - 1);
 
     if (currentText.length === 0) {
-      // Passer au mot suivant et commencer à ajouter des lettres
       isDeleting = false;
       currentWordIndex = (currentWordIndex + 1) % words.length;
     }
   } else {
-    // Ajouter un caractère
     element.innerHTML = currentWord.substring(0, currentText.length + 1);
 
     if (currentText.length === currentWord.length) {
-      // Commencer à supprimer des lettres après un délai
       isDeleting = true;
-      setTimeout(updateText, 1500); // Délai avant de commencer à supprimer
+      setTimeout(updateText, 1500);
       return;
     }
   }

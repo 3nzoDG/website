@@ -23,6 +23,9 @@ ul {
   list-style: none;
 }
 
+p {
+  font-family: "Barlow Condensed", sans-serif;
+}
 /* Loader */
 .loader {
   position: absolute;
@@ -121,7 +124,9 @@ ul {
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
 }
 
 .icone {
@@ -152,6 +157,24 @@ ul {
 
 #navHeader img {
   height: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+#navHeader img:hover {
+  transform: scale(1.5);
+}
+
+#navHeader .nav-link {
+  color: #c6c6c6;
+  text-decoration: none;
+  transition:
+    color 0.3s ease,
+    font-size 0.3s ease;
+}
+
+#navHeader .nav-link:hover {
+  color: white;
+  font-size: 1.2rem;
 }
 
 #navHeader .nav-link::after {
@@ -172,6 +195,7 @@ ul {
 #navHeader .nav-link:hover::after {
   transform: scaleX(1);
 }
+
 main {
   margin-top: 70px;
 }
@@ -199,7 +223,7 @@ section {
   padding: 10px;
   border-radius: 20px;
   transition: all 0.5s ease;
-  border: none;
+  border: 2px solid black;
   padding: 10px 20px;
   cursor: pointer;
   position: relative;
@@ -238,7 +262,7 @@ section {
 
 #mainSection img {
   width: 230px;
-  height: 200px;
+  filter: drop-shadow(0 0 0.75rem crimson);
 }
 
 /* About Me Section */
@@ -292,6 +316,10 @@ section {
   gap: 20px;
 }
 
+#getToKnowMe p {
+  text-align: justify;
+}
+
 #getToKnowMe p span {
   color: #fa3d3b;
 }
@@ -301,7 +329,7 @@ section {
   padding: 10px;
   border-radius: 20px;
   transition: all 0.5s ease;
-  border: none;
+  border: 2px solid #c6c6c6;
   padding: 10px 20px;
   cursor: pointer;
   position: relative;
@@ -335,9 +363,13 @@ section {
 #getToKnowMe,
 #skills {
   width: 50%;
+  border: 1px solid white;
+  border-radius: 0% 26%;
+  padding: 35px;
 }
 #skills h3 {
   margin-bottom: 20px;
+  color: #c6c6c6;
 }
 
 #skillsSet {
@@ -389,7 +421,7 @@ section {
   width: 30%;
 }
 .skill:nth-child(4) .progress-bar {
-  width: 75%;
+  width: 60%;
 }
 
 @keyframes progress {
@@ -457,6 +489,7 @@ section {
 
 .gallery-item:hover .gallery-item-overlay {
   opacity: 1;
+  cursor: pointer;
 }
 
 .gallery-item-overlay {
@@ -477,4 +510,84 @@ section {
   color: #c6c6c6;
   font-weight: 700;
   font-size: 20px;
+}
+
+/* Contact */
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  width: 50%;
+  padding-top: 70px;
+}
+
+#contact h2,
+#contact p {
+  padding: 10px;
+  text-align: center;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  border-color: white;
+  outline: none;
+}
+
+.formNameBox:focus-within label,
+.formMailBox:focus-within label,
+.formMessageBox:focus-within label {
+  color: white;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.formNameBox,
+.formMailBox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 30px;
+}
+
+#email,
+#full-name {
+  transition: border 0.3s;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid blue;
+  padding: 15px 0;
+  width: 100%;
+}
+
+#contact label {
+  transition: color 0.3s;
+}
+
+.formMessageBox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+#message {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid blue;
+  padding: 10px 0;
+}
+
+#nameLabelName,
+#nameLabelEmail,
+#nameLabelMessage {
+  margin-bottom: 5px;
 }

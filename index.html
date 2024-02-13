@@ -7,14 +7,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Enzo Di Giovanni</title>
 </head>
 
 <body>
+    <!-- Bouton up -->
     <div class="btnUp">
         <img src="Images/up.png" class="icone">
     </div>
+    <!-- Loader -->
     <div class="loader">
         <span class="lettre">C</span>
         <span class="lettre">H</span>
@@ -27,6 +32,7 @@
         <span class="lettre">N</span>
         <span class="lettre">T</span>
     </div>
+    <!-- Nav Header -->
     <nav id="navHeader">
         <a href="#mainSection" class="nav-link">Accueil</a>
         <a href="#aboutMe" class="nav-link ">À propos de moi</a>
@@ -35,6 +41,7 @@
         <a href="#contact" class="nav-link ">Me contacter</a>
     </nav>
     <main>
+        <!-- Main Section/ Présentation -->
         <section id="mainSection">
             <div id="presentation">
 
@@ -48,8 +55,9 @@
                 </p>
                 <a href="CV_Enzo_DG.pdf" download><button class="cv">Télécharger mon CV</button></a>
             </div>
-            <img src="Images/deadpool.jpg" alt="">
+            <img src="/Images/profile-pic (1).png" alt="">
         </section>
+        <!-- Section About Me -->
         <section id="aboutMe" class="showing">
             <div id="flex1">
 
@@ -115,7 +123,7 @@
                         <div class="skill">
                             <div class="skillInfo">
                                 <h4>Wordpress & Elementor</h4>
-                                <p>75%</p>
+                                <p>60%</p>
                             </div>
                             <div class="progress">
                                 <div class="progress-bar"></div>
@@ -124,6 +132,7 @@
                     </div>
                 </div>
         </section>
+        <!-- Section My Projects -->
         <section id="myProjects">
             <h2>MES PROJETS</h2>
             <hr>
@@ -169,6 +178,36 @@
                 </div>
 
             </div>
+        </section>
+        <!-- Section Contact -->
+        <section id="contact">
+            <h2>ENVOYEZ MOI UN MESSAGE !</h2>
+            <p>Vous avez une question ou une proposition, ou vous voulez <br>simplement
+                dire bonjour ? N'hésitez pas.</p>
+            <form action="">
+                <div class="formContainer">
+                    <div class="formNameBox">
+                        <label for="full-name" id="nameLabelName">Votre nom </label>
+                        <input type="text" name="full-name" id="full-name" placeholder="Entrez votre nom"
+                            onfocus="this.placeholder=''" onblur="this.placeholder='Entrez votre nom'">
+                    </div>
+                    <div class="formMailBox">
+                        <label for="email" id="nameLabelEmail">Votre adresse mail</label>
+                        <input type="email" name="email" id="email" placeholder="Entrez votre adresse mail"
+                            onfocus="this.placeholder=''" onblur="this.placeholder='Entrez votre adresse mail'">
+                    </div>
+                </div>
+                <div class="formMessageBox">
+                    <label for="message" id="nameLabelMessage">Votre message</label>
+                    <textarea name="message" id="message" cols="30" rows="1"
+                        placeholder="Entrez votre message ici pour prendre directement contact avec moi !"
+                        onfocus="this.placeholder=''"
+                        onblur="this.placeholder='Entrez votre message ici pour prendre directement contact avec moi !'"
+                        required></textarea>
+                </div>
+                <input type="submit" value="">
+            </form>
+
         </section>
     </main>
 
