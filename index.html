@@ -20,7 +20,7 @@
 
 <body>
     <!-- Bouton up -->
-    <div class="btnUp">
+    <div class="btnUp magic-hover">
         <img src="Images/up.png" class="icone">
     </div>
     <!-- Loader -->
@@ -40,7 +40,7 @@
     <nav id="navHeader">
         <a href="#mainSection" class="nav-link magic-hover">Accueil</a>
         <a href="#aboutMe" class="nav-link magic-hover">À propos de moi</a>
-        <a href="/index.html"><img src="Images/logo-white.png" class="magic-hover" alt="logo Enzo Di Giovanni"></a>
+        <a href="index.html"><img src="Images/logo-white.png" class="magic-hover" alt="logo Enzo Di Giovanni"></a>
         <a href="#myProjects" class="nav-link magic-hover">Mes projets</a>
         <a href="#contact" class="nav-link magic-hover">Me contacter</a>
 
@@ -50,10 +50,13 @@
         <section id="mainSection">
             <div id="presentation">
 
-                <h1>Bonjour ! <br> <br><span class=".waviy">Je suis</span> <span id="animated-text"></span></h1>
-                <p>Enthousiaste étudiant en première année à MyDigital School et animé par le désir de devenir un
-                    développeur
-                    Full Stack accompli, je recherche activement un stage pour mettre en pratique mes compétences
+                <h1><span class="accentuation">Bonjour !</span><br> <br><span class=".waviy">Je suis</span> <span
+                        id="animated-text"></span></h1>
+                <p>Enthousiaste étudiant en première année à MyDigital School et animé par le désir de devenir <span
+                        class="accentuation">un
+                        développeur
+                        Full Stack accompli</span>, je recherche activement un stage pour mettre en pratique mes
+                    compétences
                     naissantes.
                     Mon engagement envers le développement se traduit par une volonté inébranlable de relever des défis
                     techniques et de contribuer au monde numérique en constante évolution.
@@ -61,7 +64,13 @@
                 <a href="CV_Enzo_DG.pdf" download><button class="cv magic-hover">Télécharger mon
                         CV</button></a>
             </div>
-            <img src="/Images/profile-pic (1).png" alt="">
+            <div class="box magic-hover">
+                <div class="contentImage">
+                    <img src="/Images/profile-pic (1).png" alt="Image de profil">
+                    <h5>Enzo Di Giovanni <br> <span>développeur web</span></h5>
+                    <a href="#contact">Me contacter</a>
+                </div>
+            </div>
         </section>
         <!-- Section About Me -->
         <section id="aboutMe" class="showing">
@@ -94,7 +103,7 @@
                         vous intéresse n’hésitez pas à me contacter !
                     </p>
                     <br>
-                    <button class="btn-contact magic-hover">Me contacter</button>
+                    <a href="#contact"><button class="btn-contact magic-hover">Me contacter</button></a>
                 </div>
                 <div id="skills">
                     <h3>Mes compétences</h3>

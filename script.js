@@ -97,17 +97,23 @@ window.addEventListener("scroll", () => {
 });
 
 // My Projects : overlay
-const isHover = (e) => e.parentElement.querySelector(":hover") === e;
+// Sélectionnez tous les éléments de la galerie
+const galleryItems = document.querySelectorAll(".gallery-item");
 
-const myDiv = document.getElementById("gallery-item");
-document.addEventListener("mousemove", function checkHover() {
-  const hovered = isHover(myDiv);
-  if (hovered !== checkHover.hovered) {
-    console.log(hovered ? "hovered" : "not hovered");
-    checkHover.hovered = hovered;
-    console.log("salut");
-  }
-});
+// Fonction pour vérifier si la souris survole un élément
+function checkHover() {
+  galleryItems.forEach((item) => {
+    item.addEventListener("mouseover", () => {
+      // Appliquez ici l'effet de survol souhaité
+    });
+    item.addEventListener("mouseout", () => {
+      // Retirez ici l'effet de survol
+    });
+  });
+}
+
+// Appliquez l'effet de survol à tous les éléments de la galerie
+checkHover();
 
 // Effet on CV button
 const cvBtn = document.querySelector(".cv");
@@ -115,9 +121,22 @@ const cvBtn = document.querySelector(".cv");
 cvBtn.addEventListener("mouseover", () => {
   cvBtn.style.transform = "scale(1.2)";
   cvBtn.style.color = "#fff";
+  cvBtn.style.transition = "0.5s";
 });
 
 cvBtn.addEventListener("mouseout", () => {
-  cvBtn.style.transform = "scale(1)";
   cvBtn.style.color = "black";
+});
+
+//Contact btn effect
+const contactBtn = document.querySelector(".btn-contact");
+
+contactBtn.addEventListener("mouseover", () => {
+  contactBtn.style.transform = "scale(1.2)";
+  contactBtn.style.transition = "1s";
+  contactBtn.style.color = "#fff";
+});
+
+contactBtn.addEventListener("mouseout", () => {
+  contactBtn.style.color = "black";
 });
