@@ -108,3 +108,16 @@ document.addEventListener("mousemove", function checkHover() {
     console.log("salut");
   }
 });
+
+// Effet on CV button
+const cvBtn = document.querySelector(".cv");
+
+cvBtn.addEventListener("mouseover", () => {
+  cvBtn.style.transform = "scale(1.2)";
+  cvBtn.style.color = "#fff";
+});
+
+cvBtn.addEventListener("mouseout", () => {
+  cvBtn.style.transform = "scale(1)";
+  cvBtn.style.color = "black";
+});

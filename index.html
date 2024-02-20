@@ -9,7 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Enzo Di Giovanni</title>
 </head>
@@ -34,11 +38,12 @@
     </div>
     <!-- Nav Header -->
     <nav id="navHeader">
-        <a href="#mainSection" class="nav-link">Accueil</a>
-        <a href="#aboutMe" class="nav-link ">À propos de moi</a>
-        <img src="Images/logo-white.png" alt="logo Enzo Di Giovanni">
-        <a href="#myProjects" class="nav-link ">Mes projets</a>
-        <a href="#contact" class="nav-link ">Me contacter</a>
+        <a href="#mainSection" class="nav-link magic-hover">Accueil</a>
+        <a href="#aboutMe" class="nav-link magic-hover">À propos de moi</a>
+        <a href="/index.html"><img src="Images/logo-white.png" class="magic-hover" alt="logo Enzo Di Giovanni"></a>
+        <a href="#myProjects" class="nav-link magic-hover">Mes projets</a>
+        <a href="#contact" class="nav-link magic-hover">Me contacter</a>
+
     </nav>
     <main>
         <!-- Main Section/ Présentation -->
@@ -53,7 +58,8 @@
                     Mon engagement envers le développement se traduit par une volonté inébranlable de relever des défis
                     techniques et de contribuer au monde numérique en constante évolution.
                 </p>
-                <a href="CV_Enzo_DG.pdf" download><button class="cv">Télécharger mon CV</button></a>
+                <a href="CV_Enzo_DG.pdf" download><button class="cv magic-hover">Télécharger mon
+                        CV</button></a>
             </div>
             <img src="/Images/profile-pic (1).png" alt="">
         </section>
@@ -88,7 +94,7 @@
                         vous intéresse n’hésitez pas à me contacter !
                     </p>
                     <br>
-                    <button class="btn-contact">Me contacter</button>
+                    <button class="btn-contact magic-hover">Me contacter</button>
                 </div>
                 <div id="skills">
                     <h3>Mes compétences</h3>
@@ -139,7 +145,7 @@
             <p>Ici vous trouverez des exemples de ce que je fait et ce que <br> j'ai réaliser dans le cadre de
                 projet
                 d'école</p>
-            <div class="gallery">
+            <div class="gallery magic-hover magic-hover__square">
                 <div class="gallery-item">
                     <img src="Images/img1.jpg" alt="">
                     <div class="gallery-item-overlay">
@@ -212,9 +218,26 @@
     </main>
 
 
-    <footer>
-
+    <footer id="footer">
+        <a href="https://github.com/EnzoDiGiovanni" target="_blank"><img class="logoRS magic-hover"
+                src="/Images/logogithub.png" alt="logo GitHub"></a>
+        <a href="https://www.linkedin.com/in/enzodigiovanni/" target="_blank"><img class="logoRS magic-hover"
+                src="/Images/logolinkedIn.png" alt="logo linkedin"></a>
     </footer>
+    <script type="text/javascript"
+        src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js">
+        </script>
+    <script type="text/javascript">
+        options = {
+            "outerStyle": "disable",
+            "hoverEffect": "pointer-blur",
+            "hoverItemMove": false,
+            "defaultCursor": false,
+            "outerWidth": 30,
+            "outerHeight": 30,
+        }
+        magicMouse(options);
+    </script>
     <script src="script.js"></script>
 </body>
 
