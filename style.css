@@ -17,6 +17,7 @@ body {
 a {
   text-decoration: none;
   color: #fff;
+  font-family: "Roboto Mono", monospace;
 }
 
 ul {
@@ -32,12 +33,21 @@ p {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5 {
   color: #c6c6c6;
   font-family: "Anta", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+
+/* Lib */
+
+#magicPointer {
+  z-index: 9999;
+}
+
 /* Loader */
 .loader {
   position: absolute;
@@ -235,7 +245,7 @@ section {
 
 #presentation a {
   width: 150px;
-  border: 1px solid white;
+
   border-radius: 25px;
 }
 
@@ -244,7 +254,7 @@ section {
   padding: 10px;
   border-radius: 20px;
   transition: all 0.5s ease;
-  border: 2px solid white;
+  border: 2px solid grey;
   padding: 10px 20px;
   position: relative;
   overflow: hidden;
@@ -295,7 +305,7 @@ section {
   content: "";
   position: absolute;
   inset: -10px 100px;
-  background: linear-gradient(315deg, #00ffff, #ff6b6b);
+  background: linear-gradient(315deg, #c6c6c6, #fa3d3b);
   transition: 0.5s;
   animation: animate 3.5s linear infinite;
 }
@@ -448,7 +458,7 @@ section {
   padding: 10px;
   border-radius: 20px;
   transition: all 0.5s ease;
-  border: 2px solid white;
+  border: 2px solid grey;
   padding: 10px 20px;
   cursor: pointer;
   position: relative;
@@ -709,15 +719,165 @@ form {
   color: white;
 }
 
+/* Footer */
 #footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  background-color: #1c1c1c;
+  background-color: #8f001a;
+  padding: 30px;
 }
 
 #footer img {
   width: 50px;
 }
 
-#magicPointer {
-  z-index: 9999;
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 0.8rem;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #181717;
+  color: #fff;
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background: #0077b5;
+  color: #fff;
+}
+
+.wrapper .phone:hover,
+.wrapper .phone:hover .tooltip,
+.wrapper .phone:hover .tooltip::before {
+  background: #4caf50;
+  color: #fff;
+}
+
+.wrapper .mail:hover,
+.wrapper .mail:hover .tooltip,
+.wrapper .mail:hover .tooltip::before {
+  background: #d14836;
+  color: #fff;
+}
+
+/* Media querries */
+@media screen and (max-width: 1024px) {
+  #presentation p {
+    width: 100%;
+  }
+
+  #flex2 {
+    flex-direction: column;
+  }
+
+  #getToKnowMe,
+  #skills {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #mainSection {
+    flex-direction: column;
+  }
+
+  #flex2 {
+    flex-direction: column;
+  }
+
+  #skills,
+  #getToKnowMe {
+    width: 100%;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #presentation p {
+    width: 100%;
+  }
+
+  #presentation {
+    align-items: center;
+  }
+
+  #presentation a {
+    margin-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .formContainer {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 320px) {
 }

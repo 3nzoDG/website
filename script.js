@@ -122,6 +122,7 @@ cvBtn.addEventListener("mouseover", () => {
   cvBtn.style.transform = "scale(1.2)";
   cvBtn.style.color = "#fff";
   cvBtn.style.transition = "0.5s";
+  cvBtn.style.border = "2px solid white";
 });
 
 cvBtn.addEventListener("mouseout", () => {
@@ -135,8 +136,26 @@ contactBtn.addEventListener("mouseover", () => {
   contactBtn.style.transform = "scale(1.2)";
   contactBtn.style.transition = "1s";
   contactBtn.style.color = "#fff";
+  contactBtn.style.border = "2px solid white";
 });
 
 contactBtn.addEventListener("mouseout", () => {
   contactBtn.style.color = "black";
+});
+
+// Copy clipboard
+
+document.querySelectorAll(".icon").forEach((icon) => {
+  icon.addEventListener("click", async function () {
+    // Lire le texte à copier de l'attribut data-text-to-copy de l'icône cliquée
+    let text = this.getAttribute("data-text-to-copy");
+    try {
+      // Essayer de copier le texte dans le presse-papiers
+      await navigator.clipboard.writeText(text);
+      alert("Texte copié dans le presse-papiers: " + text);
+    } catch (err) {
+      // Afficher une erreur si la copie échoue
+      console.error("Erreur lors de la copie : ", err);
+    }
+  });
 });
