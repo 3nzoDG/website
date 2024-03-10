@@ -541,16 +541,19 @@ section {
 }
 
 .skill:nth-child(1) .progress-bar {
-  width: 60%;
+  width: 80%;
 }
 .skill:nth-child(2) .progress-bar {
-  width: 25%;
+  width: 30%;
 }
 .skill:nth-child(3) .progress-bar {
   width: 30%;
 }
 .skill:nth-child(4) .progress-bar {
   width: 60%;
+}
+.skill:nth-child(5) .progress-bar {
+  width: 20%;
 }
 
 @keyframes progress {
@@ -652,6 +655,8 @@ section {
 form {
   width: 50%;
   padding-top: 70px;
+  display: flex;
+  flex-direction: column;
 }
 
 #contact h2,
@@ -718,6 +723,26 @@ form {
 #nameLabelMessage {
   margin-bottom: 5px;
   color: white;
+}
+
+#submit-btn {
+  padding: 15px 20px;
+  cursor: pointer;
+  position: relative;
+  color: red;
+  width: 50%;
+}
+
+#submit-btn::before {
+  content: "ALLo";
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #d14836;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Footer */
