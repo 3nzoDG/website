@@ -164,17 +164,28 @@ h5 {
 
 #navHeader {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 60px;
   background-color: #1c1c1c;
   box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+  padding: 20px 60px;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   z-index: 10;
-  height: 70px;
+}
+
+#navHeader ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+}
+
+#icons {
+  cursor: pointer;
+  display: none;
 }
 
 #navHeader img {
@@ -217,6 +228,8 @@ h5 {
 #navHeader .nav-link:hover::after {
   transform: scaleX(1);
 }
+
+/* Header */
 
 main {
   margin-top: 70px;
@@ -601,7 +614,8 @@ section {
 .gallery-item {
   border-radius: 10px;
   position: relative;
-  width: 340px;
+  width: 100%;
+  border: 1px solid white;
   height: 210px;
   overflow: hidden;
 }
@@ -870,17 +884,76 @@ form {
     width: 100%;
   }
 
+  .loader {
+    display: none;
+  }
+
+  #mainSection {
+    flex-direction: column;
+  }
   #flex2 {
     flex-direction: column;
+  }
+
+  #presentation {
+    align-items: center;
+    width: 100%;
   }
 
   #getToKnowMe,
   #skills {
     width: 100%;
   }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 768px) {
+  #icons {
+    display: block;
+  }
+
+  #icons::before {
+    content: url(Images/iconBurger.svg);
+  }
+
+  .active #icons::before {
+    content: url(Images/croix.svg);
+  }
+
+  #navHeader ul {
+    position: fixed;
+    flex-direction: column;
+    left: -100%;
+    top: 10%;
+    background: #1c1c1c;
+    width: 100%;
+    text-align: center;
+    transition: 0.25s;
+  }
+
+  #navHeader li {
+    padding: 3px 0;
+    width: 100%;
+  }
+
+  #navHeader li:hover {
+    background: #3a3939;
+  }
+
+  #navHeader.active ul {
+    left: 0;
+  }
+
+  #navHeader img {
+    height: 30px;
+  }
+
+  #navHeader .nav-link::after {
+    display: none;
+  }
+
   #mainSection {
     flex-direction: column;
   }
@@ -895,7 +968,7 @@ form {
   }
 
   .gallery {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 
   #presentation p {
@@ -904,6 +977,7 @@ form {
 
   #presentation {
     align-items: center;
+    width: 100%;
   }
 
   #presentation a {
@@ -922,4 +996,7 @@ form {
 }
 
 @media screen and (max-width: 320px) {
+  #flex2 {
+    padding: 10px;
+  }
 }
