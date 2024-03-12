@@ -910,6 +910,9 @@ form {
 }
 
 @media screen and (max-width: 768px) {
+  #flex2 {
+    padding: 10px;
+  }
   #icons {
     display: block;
   }
