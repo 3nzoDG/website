@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if (mail($to, $subject, $content, $headers)) {
             // Redirection après l'envoi réussi
-            header('Location: /'); // Assurez-vous d'avoir une page de succès
+            header('Location: /success-page.php');
             exit;
         } else {
             echo "<script>alert('Erreur lors de l\'envoi du message.');</script>";
