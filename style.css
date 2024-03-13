@@ -8,6 +8,7 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-color: #8f001b transparent;
 }
 
 body {
