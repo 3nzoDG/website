@@ -186,3 +186,11 @@ arrow.addEventListener("click", () => {
       ? "rotate(0deg)"
       : "rotate(180deg)";
 });
+
+arrow.addEventListener("click", function () {
+  drpSchool.classList.toggle("is-open");
+
+  if (!drpSchool.classList.contains("is-open")) {
+    drpSchool.scrollTop = 0;
+  }
+});
