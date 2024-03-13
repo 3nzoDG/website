@@ -241,6 +241,7 @@ section {
 }
 
 /* Main Section Home */
+
 .accentuation {
   color: #8f001a;
 }
@@ -503,12 +504,16 @@ section {
   justify-content: space-between;
 }
 #getToKnowMe,
-#skills {
+#skills,
+.school {
   width: 50%;
   border: 1px solid white;
   border-radius: 25px;
   padding: 35px;
   transition: all 0.4s ease;
+  box-shadow:
+    0 0 15px rgba(255, 255, 255, 0.2),
+    0 0 20px rgba(255, 255, 255, 0.15) inset;
 }
 
 #skills:hover,
@@ -519,6 +524,7 @@ section {
 
 #getToKnowMe:hover p span {
   color: black;
+  transition: all 0.4s ease;
 }
 
 #getToKnowMe:hover p,
@@ -602,6 +608,79 @@ section {
   to {
     transform: scaleX(1);
   }
+}
+
+/* School Experience */
+#flex3 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  height: 100%;
+}
+
+#flex3 .close {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.school {
+  width: 80%;
+  border: 1px solid white;
+  border-radius: 25px;
+  padding: 35px;
+  transition: all 0.4s ease;
+  box-shadow:
+    0 0 15px rgba(255, 255, 255, 0.2),
+    0 0 20px rgba(255, 255, 255, 0.15) inset;
+  overflow: hidden;
+  max-height: 100px;
+}
+
+.school hr {
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.openSchool {
+  height: 100%;
+  max-height: 500px;
+  overflow: scroll;
+}
+
+.school .mds p,
+.school .carrel p,
+.school .stJoseph p {
+  padding-top: 35px;
+}
+
+.mds,
+.carrel,
+.stJoseph {
+  display: flex;
+  flex-direction: column;
+}
+
+.mds-container,
+.carrel-container,
+.stJoseph-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+  gap: 30px;
+}
+
+.school img {
+  width: 200px;
+  border-radius: 15px;
+}
+
+.school i {
+  color: white;
+  cursor: pointer;
+  transition: transform 0.5s ease;
 }
 
 /* My project Section */
@@ -1011,6 +1090,12 @@ form {
 
   #presentation a {
     margin-bottom: 25px;
+  }
+
+  .mds-container,
+  .carrel-container,
+  .stJoseph-container {
+    flex-direction: column;
   }
 }
 

@@ -173,3 +173,16 @@ document.querySelectorAll(".icon").forEach((icon) => {
     }
   });
 });
+
+// DropDown menu School
+
+const drpSchool = document.querySelector(".school");
+const arrow = document.querySelector(".fa-arrow-down");
+
+arrow.addEventListener("click", () => {
+  drpSchool.classList.toggle("openSchool");
+  arrow.style.transform =
+    arrow.style.transform === "rotate(180deg)"
+      ? "rotate(0deg)"
+      : "rotate(180deg)";
+});
