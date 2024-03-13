@@ -27,7 +27,7 @@
         .button {
             position: relative;
             display: inline-block;
-            background-color: #4CAF50;
+            background-color: #8f001a;
             color: black;
             padding: 10px 20px;
             text-decoration: none;
@@ -64,7 +64,7 @@
     <div class="success-message">
         <h1>Message envoyé avec succès!</h1>
         <p>Votre message a bien été reçu. Je vous répondrais dans les plus brefs délais.</p>
-        <a href="http://votre_site_web.com" class="button">Revenir sur mon site</a>
+        <a href="https://enzodigiovanni.fr/" class="button">Revenir sur mon site</a>
     </div>
 </body>
 
