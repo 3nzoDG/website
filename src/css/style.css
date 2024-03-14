@@ -1024,11 +1024,11 @@ form {
   }
 
   #icons::before {
-    content: url(Images/iconBurger.svg);
+    content: url(/assets/Images/iconBurger.svg);
   }
 
   .active #icons::before {
-    content: url(Images/croix.svg);
+    content: url(/assets/Images/croix.svg);
   }
 
   #navHeader ul {
