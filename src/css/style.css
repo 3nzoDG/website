@@ -564,7 +564,6 @@ section {
 }
 
 #skillsSet li:hover {
-  background-color: red;
   color: #c6c6c6;
   cursor: default;
 }
